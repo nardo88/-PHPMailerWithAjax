@@ -1,0 +1,251 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    line-height: 1;
+    font-size: 14px;
+    background-color: #333333;
+    font-family: Arial;
+}
+
+.form {
+
+    max-width: 550px;
+    margin: 0 auto;
+    color: #fff;
+    padding: 30px 0;
+
+    * {
+        outline: none;
+    }
+    // .form__body
+
+    &__body {
+        width: 100%;
+    }
+
+    // .form__title
+
+    &__title {
+        font-size: 40px;
+        font-weight: 700;
+        margin: 0 0 30px 0;
+    }
+
+    // .form__item
+
+    &__item {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+
+    // .form__label
+
+    &__label {
+        font-size: 18px;
+        display: block;
+        margin: 0 0 10px 0;
+    }
+
+    // .form__input
+
+    &__input {
+        height: 50px;
+        padding: 0 20px;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 18px;
+        transition: .3s;
+
+        &:focus{
+            box-shadow: 0 0 15px #7a956b;
+        }
+    }
+
+    // .form__button
+
+    &__button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60px;
+        background-color: #7a956b;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: 20px;
+        cursor: pointer;
+        box-shadow: 0 5px 0 #2a3325;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border: none;
+        transition: .3s;
+        &:hover{
+            background-color: #21291d;
+
+        }
+    }
+}
+textarea.form__input{
+    min-height: 120px;
+    resize: none;
+    padding: 20px;
+
+}
+.options {
+    padding-top: 10px;
+    // .options__item
+
+    &__item {
+        margin-bottom: 10px;
+    }
+
+    // .options__input
+
+    &__input {
+        display: none;
+
+        &:checked + .options__label::after{
+            transform: scale(1);
+        }
+    }
+
+    // .options__label
+
+    &__label {
+        display: inline-flex;
+        font-size: 16px;
+        line-height: 140%;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+
+        &:before{
+            content: '';
+            align-self: flex-start;
+            flex: 0 0 24px;
+            height: 24px;
+            background: #ffffff;
+            border-radius: 50%;
+            margin-right: 10px;
+
+        }
+
+        &:after{
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 16px;
+            height: 16px;
+            background-color: #7a956b;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: .3s;
+
+        }
+    }
+}
+.select {
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 0 20px;
+}
+.file {
+
+    // .file__item
+
+    &__item {
+        position: relative;
+    }
+
+    // .file__input
+
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        font-size: 0;
+        cursor: pointer;
+
+    }
+
+    // .file__button
+
+    &__button {
+        display: inline-flex;
+        min-height: 40px;
+        border-radius: 30px;
+        justify-content: center;
+        align-items: center;
+        background-color: #77608d;
+        padding: 0 20px;
+    }
+
+    // .file__preview
+
+    &__preview {
+        display: inline-block;
+        max-width: 100px;
+        padding-top: 10px;
+
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.checkbox {
+
+    // .checkbox__input
+
+    &__input {
+        display: none;
+
+        &:checked + .checkbox__label:after{
+            transform: scale(1);
+
+        }
+    }
+
+    // .checkbox__label
+
+    &__label {
+        font-size: 16px;
+        line-height: 140%;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        
+        
+        &:before{
+            content: '';
+            align-self: flex-start;
+            flex: 0 0 24px;
+            height: 24px;
+            background: #fff;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        &:after{
+            content: '';
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            background-color: #7a956b;
+            transform: scale(0);
+            transition: .3s;
+            border-radius: 4px;
+        }
+    }
+}
