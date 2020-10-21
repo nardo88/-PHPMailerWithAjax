@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: formData,
             })
 
-            console.log(formData.get('image'));
-
             if (response.ok){
                 let result = await response.json()
                 alert(result.message)
@@ -83,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const formPreview = document.querySelector('.file__preview')
 
     formImage.addEventListener('change', () => {
-        console.log(formImage.files[0]);
         uploadFile(formImage.files[0]);
     })
 
