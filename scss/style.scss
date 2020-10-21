@@ -23,6 +23,22 @@ body{
 
     &__body {
         width: 100%;
+        position: relative;
+
+        &:after{
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(51, 51, 51, 0.9) url(../img/g0R5.gif) center / 50px no-repeat;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+        }
+
+        
     }
 
     // .form__title
@@ -249,3 +265,20 @@ textarea.form__input{
         }
     }
 }
+
+
+.form__input._error{
+    box-shadow:  0 0 15px red;
+}
+
+.checkbox._error .checkbox__label::before{
+    box-shadow:  0 0 15px red;
+
+}
+
+._sending:after{
+    opacity: 1;
+    visibility: visible;
+
+    
+}   
